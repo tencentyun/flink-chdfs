@@ -17,7 +17,7 @@ Flink 1.10.0
 
 ### 获取Flink-chdfs 发行包
 
-    下载地址：[Flink-chdfs release](https://github.com/yuyang733/flink-cos-fs/releases)
+    下载地址：[Flink-chdfs release](https://github.com/tencentyun/flink-chdfs/releases)
 
 
 ### 安装Flink-chdfs 依赖
