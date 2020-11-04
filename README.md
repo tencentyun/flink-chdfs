@@ -11,6 +11,7 @@ Flink-chdfs 是腾讯云 云CHDFS 针对Flink的文件系统实现，并且支�
 ### 软件依赖
 
 Flink 1.10.0
+Flink 1.11.0
 
 
 ## 使用方法
