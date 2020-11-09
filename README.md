@@ -86,7 +86,8 @@ StreamingFileSink<String> fileSink  =  StreamingFileSink.forRowFormat(
 
 ## 重要注意事项
 
-目前从flink checkpoint恢复时需要等待1min以上，该时间是CHDFS后端的session过期时间，server端可以配置调整。如果没有等待而从checkpoint进行恢复，可能会出现不能open文件的异常。
+Flink-chdfs v1.10-0.1.0 版本从flink checkpoint恢复时需要等待1min以上，该时间是CHDFS后端的session过期时间，server端可以配置调整。如果没有等待而从checkpoint进行恢复，可能会出现不能open文件的异常。
+Flink-chdfs v1.10-0.1.1 版本优化添加主动释放session，从flink checkpoint恢复时不需要再等待1min（session过期时间）。
 
 ## FAQ
 
