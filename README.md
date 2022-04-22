@@ -25,7 +25,10 @@ Flink 1.11.0
 
 1.执行`mkdir ${FLINK_HOME}/plugins/chdfs-hadoop`,  在`${FLINK_HOME}/plugins`目录下创建flink-chdfs-hadoop插件目录；
 
-2.将对应版本的预编译包（flink-chdfs-hadoop-{flink.version}-{version}.jar）拷贝到`${FLINK_HOME}/plugins/chdfs-hadoop`目录下；
+2.将对应版本的预编译包（flink-chdfs-hadoop-{flink.version}-{version}.jar）拷贝到`${FLINK_HOME}/plugins/chdfs-hadoop`目录下，
+flink针对lib和plugins的加载方式不同，如果flink版本低也可以尝试将编译的包放到`${FLINK_HOME}/lib`目录下；
+PS：如果遇到类似“Recoverable writers on Hadoop are only supported for HDFS and for Hadoop version 2.7 or newer”说明加载到了Hadoop file system 的recover实现，
+请检查jar包位置及配置是否正确；
 
 3.在${FLINK_HOME}/conf/flink-conf.yaml中添加一些CHDFS相关配置以确保flink能够访问到CHDFS，这里的配置键与CHDFS完全兼容，可参考[hadoop-chdfs:[云CHDFS-操作指南-挂载CHDFS](https://cloud.tencent.com/document/product/1105/36368)](https://cloud.tencent.com/document/product/1105/36368)，必须配置信息如下：
 
